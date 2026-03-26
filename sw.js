@@ -1,22 +1,22 @@
-// sw.js - Service Worker para DNailsPassion
+// sw.js - Service Worker para GabyNailsBeauty
 
-const CACHE_NAME = 'dnailspassion-v1';
+const CACHE_NAME = 'gabynailsbeauty-v1';
 const urlsToCache = [
-  '/dnailspassion/',
-  '/dnailspassion/index.html',
-  '/dnailspassion/admin.html',
-  '/dnailspassion/admin-login.html',
-  '/dnailspassion/setup-wizard.html',
-  '/dnailspassion/editar-negocio.html',
-  '/dnailspassion/manifest.json',
-  '/dnailspassion/icons/icon-72x72.png',
-  '/dnailspassion/icons/icon-96x96.png',
-  '/dnailspassion/icons/icon-128x128.png',
-  '/dnailspassion/icons/icon-144x144.png',
-  '/dnailspassion/icons/icon-152x152.png',
-  '/dnailspassion/icons/icon-192x192.png',
-  '/dnailspassion/icons/icon-384x384.png',
-  '/dnailspassion/icons/icon-512x512.png'
+  '/gabynailsbeauty/',
+  '/gabynailsbeauty/index.html',
+  '/gabynailsbeauty/admin.html',
+  '/gabynailsbeauty/admin-login.html',
+  '/gabynailsbeauty/setup-wizard.html',
+  '/gabynailsbeauty/editar-negocio.html',
+  '/gabynailsbeauty/manifest.json',
+  '/gabynailsbeauty/icons/icon-72x72.png',
+  '/gabynailsbeauty/icons/icon-96x96.png',
+  '/gabynailsbeauty/icons/icon-128x128.png',
+  '/gabynailsbeauty/icons/icon-144x144.png',
+  '/gabynailsbeauty/icons/icon-152x152.png',
+  '/gabynailsbeauty/icons/icon-192x192.png',
+  '/gabynailsbeauty/icons/icon-384x384.png',
+  '/gabynailsbeauty/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/dnailspassion/icons/icon-192x192.png');
+            return caches.match('/gabynailsbeauty/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para DNailsPassion');
+console.log('✅ Service Worker configurado para GabyNailsBeauty');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);

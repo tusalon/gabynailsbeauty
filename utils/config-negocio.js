@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: DNailsPassion
+// CLIENTE: GabyNailsBeauty
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = '54a5b3ba-a23f-44a2-a409-4f930765c111'; // ID de DNailsPassion
+const NEGOCIO_ID_POR_DEFECTO = '13e8e12a-373a-45be-a3f8-6616571f7c75'; // ID de GabyNailsBeauty
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'DNailsPassion';
+    return config?.nombre || 'GabyNailsBeauty';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '58959177';
+    return config?.telefono || '55424551';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'darlibatista@icloud.com';
+    return config?.email || 'gabrielahdez2005@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a DNailsPassion!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a GabyNailsBeauty!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'dnailspassion';
+    return config?.ntfy_topic || 'gabynailsbeauty';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para DNailsPassion');
+console.log('✅ config-negocio.js listo para GabyNailsBeauty');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);
